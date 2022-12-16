@@ -1,0 +1,10 @@
+.main__wrapper{
+    /* margin: 4rem 0, */
+}
+.img img{
+    height: 15em;
+    display: inline-block;
+    border-radius: 1rem;
+    object-fit: cover;
+    width: 100%;
+}
