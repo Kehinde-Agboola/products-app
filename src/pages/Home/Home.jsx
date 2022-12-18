@@ -5,7 +5,9 @@ const Home = () => {
     return(
         <>
         <Category/>
+        <div className="App">
         <Product/>
+        </div>
         </>
     )
 }

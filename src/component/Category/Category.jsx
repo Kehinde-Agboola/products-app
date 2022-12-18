@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BsFillLaptopFill } from "react-icons/bs";
 import {FiSmartphone} from "react-icons/fi";
@@ -8,20 +8,24 @@ import "./category.css"
 
 const Category = () => {
   return (
-    <div className="flex justify-center my-4">
-        <NavLink to={'/products/Laptops'}>{BsFillLaptopFill}
+    <div className="flex justify-center my-4 gap-[2rem]">
+        <NavLink to={'/products/Laptops'}>
+          {BsFillLaptopFill}
         <h4>Laptops</h4>
         </NavLink>
-        <NavLink to={'/products/SmartPhones'}>{FiSmartphone}\
+        <NavLink to={'/products/SmartPhones'}>
+        {FiSmartphone}
         <h4>SmartPhones</h4>
         </NavLink>
-        <NavLink to={'/products/Fragrances'}>{GiFragrance}
+        <NavLink to={'/products/Fragrances'}>
+          {GiFragrance}
         <h4>Fragrances</h4>
         </NavLink>
 
-        <div>{FaOilCan}
+        <NavLink to={'/products/SkinCare'}>
+        {FaOilCan} 
         <h4>Skin Care</h4>
-        </div>
+        </NavLink>
     </div>
   )
 }

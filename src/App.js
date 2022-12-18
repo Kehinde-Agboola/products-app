@@ -2,7 +2,7 @@ import Pages from "../src/pages/Pages/Pages"
 function App() {
   return (
     <body>
-      <div className="App">
+      <div>
       <Pages/>
     </div>
     </body>
