@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom';
 import "./product.css"
 import { Splide, SplideSlide } from '@splidejs/react-splide'; 
 import '@splidejs/react-splide/css';
@@ -6,7 +7,7 @@ const Popular = () => {
     const [product, setProduct] = useState([]);
     const getProduct = async () => {
         
-        const check = localStorage.getItem('   product');
+        const check = localStorage.getItem('product');
 
         if(check){
             setProduct(JSON.parse(check))
@@ -34,11 +35,13 @@ const Popular = () => {
                 autoPlay: 'true'
             }}>
         {product.map((product, id) => (
-            <SplideSlide>
-                <div key={id} className="card">
-                <div className='img'><img src={product.thumbnail} alt={product.title}/></div>
-                <h4 className='text-center font-bold text-white'>{product.title}</h4>
-            </div>
+            <SplideSlide key={id}>
+                <Link to={'/details' + product.name}>
+                <div className="card">
+                    <div className='img'><img src={product.thumbnail} alt={product.title}/></div>
+                    <h4 className='text-center font-bold text-white'>{product.title}</h4>x
+                    </div>
+                </Link>
             </SplideSlide>
         ))}
         </Splide>
