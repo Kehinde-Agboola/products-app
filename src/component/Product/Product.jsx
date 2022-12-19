@@ -36,10 +36,10 @@ const Popular = () => {
             }}>
         {product.map((product, id) => (
             <SplideSlide key={id}>
-                <Link to={'/details' + product.name}>
+                <Link to={'/details' + product.id}>
                 <div className="card">
                     <div className='img'><img src={product.thumbnail} alt={product.title}/></div>
-                    <h4 className='text-center font-bold text-white'>{product.title}</h4>x
+                    <h4 className='text-center font-bold text-white'>{product.title}</h4>
                     </div>
                 </Link>
             </SplideSlide>

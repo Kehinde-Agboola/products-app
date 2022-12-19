@@ -7,7 +7,7 @@ const Details = () => {
     let params = useParams()
 
     const fetchDetails = async () =>{
-        const res = await fetch(`https://dummyjson.com/products/${params.name}`)
+        const res = await fetch(`https://dummyjson.com/products.${params.name}`)
         const data = await res.json()
         setDetails(data)
     }
@@ -16,14 +16,8 @@ const Details = () => {
     }, [params.name])
   return (
     <>
-         {details.map((product, id) => (
-                <div className="card" key={id}>
-                    <div className='img'><img src={product.thumbnail} alt={product.title}/>
-                    <h4 className='text-center font-bold text-white'>{product.title}</h4>
-                    <p className='text-center font-bold text-white'>{product.description}</p>
-                    </div>
-                </div>
-         ))}
+        {details.title}
+        {details.description}
     </>
   )
 }
