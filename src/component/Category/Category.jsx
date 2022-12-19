@@ -10,18 +10,17 @@ const Category = () => {
   return (
     <div className="flex justify-center my-4 gap-[2rem]">
         <NavLink to={'/products/Laptops'}>
-          {BsFillLaptopFill}
         <h4>Laptops</h4>
+        {BsFillLaptopFill}
         </NavLink>
         <NavLink to={'/products/SmartPhones'}>
-        {FiSmartphone}
         <h4>SmartPhones</h4>
+        {FiSmartphone}
         </NavLink>
         <NavLink to={'/products/Fragrances'}>
-          {GiFragrance}
         <h4>Fragrances</h4>
+        {GiFragrance}
         </NavLink>
-
         <NavLink to={'/products/SkinCare'}>
         {FaOilCan} 
         <h4>Skin Care</h4>
