@@ -15,7 +15,7 @@ img{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 5% 10%;
-  background: gray;
+  /* background: gray; */
   padding: 2rem 2rem;
   border-radius: 20px;
 }

@@ -5,7 +5,10 @@ import { useParams } from 'react-router-dom'
 const Details = () => {
     const [details, setDetails] = useState({})
     let params = useParams()
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
+    // const goHomeBtn = () => {
+    //     navigate(-1)
+    // }
     // const goHomeBtn = () => navigate("/")
     const fetchDetails = async () =>{
         const res = await fetch(`https://dummyjson.com/products/${params.name}`)
@@ -19,7 +22,7 @@ const Details = () => {
     <>
        <div>
        <button className='px-8 py-2 text-white text-center bg-slate-700 m-10'
-            // onClick={goHomeBtn()}
+            onClick={() => navigate(-1)}
             >
             <i class="fa fa-arrow-left"></i> Back
             </button>

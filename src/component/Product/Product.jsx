@@ -23,7 +23,7 @@ const Popular = () => {
     return(
         <>
         <div className="main__wrapper">
-            <h3 className='font-bold text-white py-5'>Products Available</h3>
+            <h3 className='font-bold py-5'>Products Available</h3>
             <Splide options={{
                 perPage: 4,
                 arrows: false,
@@ -37,7 +37,7 @@ const Popular = () => {
                 <Link to={'/details/' + product.id}>
                 <div className="card">
                     <div className='img'><img src={product.thumbnail} alt={product.title}/></div>
-                    <h4 className='text-center font-bold text-white'>{product.title}</h4>
+                    <h4 className='text-center font-bold text-black'>{product.title}</h4>
                     </div>
                 </Link>
             </SplideSlide>
