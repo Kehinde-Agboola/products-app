@@ -6,11 +6,9 @@ import '@splidejs/react-splide/css';
 const Popular = () => {
     const [product, setProduct] = useState([]);
     const getProduct = async () => {
-        
         const check = localStorage.getItem('product');
-
         if(check){
-            setProduct(JSON.parse(check))
+        setProduct(JSON.parse(check))
         } else{
         const res = await fetch("https://dummyjson.com/products");
         const data = await res.json()
@@ -36,7 +34,7 @@ const Popular = () => {
             }}>
         {product.map((product, id) => (
             <SplideSlide key={id}>
-                <Link to={'/details' + product.id}>
+                <Link to={'/details/' + product.id}>
                 <div className="card">
                     <div className='img'><img src={product.thumbnail} alt={product.title}/></div>
                     <h4 className='text-center font-bold text-white'>{product.title}</h4>
